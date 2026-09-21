@@ -1,0 +1,27 @@
+trigger:
+  branches:
+    include:
+      - main
+
+stages:
+  - stage: terraforminitandvalidate
+    displayName: init validate stage     
+    pool: MYAGENT
+    jobs:
+      - job: intandvalidatejob
+        displayName: initvalidatejob
+        steps:
+          
+        - task: TerraformTask@5
+          inputs:
+            provider: 'azurerm'
+            command: 'init'
+            backendServiceArm: 'MYSERVICE'
+            backendAzureRmStorageAccountName: 'tfstate098'
+            backendAzureRmContainerName: 'tfstate098container'
+            backendAzureRmKey: 'terraform.tfstate'
+
+        - task: TerraformTask@5
+          inputs:
+            provider: 'azurerm'
+            command: 'validate'
