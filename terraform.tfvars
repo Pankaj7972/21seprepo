@@ -1,17 +1,17 @@
 abcd = {
 
-  "rg1" = {
-    name     = "resourcegroup121212"
+  "rga" = {
+    name     = "yesrg"
     location = "westus"
   }
 
-  "rg2" = {
-    name     = "resourcegroup121312"
+  "rgb" = {
+    name     = norg"
     location = "westus"
   }
 
-  "rg3" = {
-    name     = "resourcegroup121412"
+  "rgc" = {
+    name     = "whyrg"
     location = "westus"
   }
 }
