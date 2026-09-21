@@ -6,7 +6,7 @@ abcd = {
   }
 
   "rgb" = {
-    name     = norg"
+    name     = "norg"
     location = "westus"
   }
 
